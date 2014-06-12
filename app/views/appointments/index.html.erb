@@ -1,3 +1,4 @@
+<div id="msgbox" class="mbox"><p id="msgbox_txt"></p></div>
 <h1>Listing appointments</h1>
 
 <table>
@@ -21,8 +22,9 @@
         <td><%= appointment.last_name %></td>
         <td><%= appointment.comment %></td>
         <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>        
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Destroy', appointment, method: :delete, class: 'link-delete', remote: true, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

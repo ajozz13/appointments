@@ -1,4 +1,6 @@
-<%= form_for(@appointment) do |f| %>
+<div id="msgbox" class="mbox"><p id="msgbox_txt"></p></div>
+
+<%= form_for(@appointment, remote: true, format: :json, html: {class: :appointment_form}) do |f| %>
   <% if @appointment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>

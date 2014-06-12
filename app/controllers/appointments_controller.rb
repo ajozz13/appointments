@@ -29,10 +29,11 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-        format.json { render :show, status: :created, location: @appointment }
+        #format.json { render :show, status: :created, location: @appointment }
+        format.json { render json: { notice: "Appointment was successfully created.", status: :created, object: @appointment.to_json } }
       else
         format.html { render :new }
-        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+        format.json { render json: @appointment.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +44,11 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       if @appointment.update(appointment_params)
         format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @appointment }
+        #format.json { render :show, status: :ok, location: @appointment }
+        format.json { render json: { notice: "Appointment was successfully updated.", status: :ok, object: @appointment.to_json } }
       else
         format.html { render :edit }
-        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+        format.json { render json: @appointment.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -58,6 +60,7 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to appointments_url, notice: 'Appointment was successfully destroyed.' }
       format.json { head :no_content }
+      #format.json { render json: { status: :destroy, notice: 'Appointment was destroyed.' } }
     end
   end
 
