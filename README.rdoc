@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a skill set presentation for CareCloud.
 
-Things you may want to cover:
+* Ruby version - Ruby 2.1.1p76
 
-* Ruby version
+* Rails version - Rails 4.1.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* System dependencies - none
 
 * Deployment instructions
 
-* ...
+Thank you for your review of this simple test application. 
 
+These are the features of the application.
+<ul>
+<li>Ajax CRUD application</li>
+<li>Validate that start time is not in the past</li>
+<li>Validate that end time is not older than the start time</li>
+<ui>
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+TODO:
+1> validate that the events don't overlap
+2> ajax delete
+3> integrate jquery-ui effects.
+
