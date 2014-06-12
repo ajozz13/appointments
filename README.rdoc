@@ -13,11 +13,11 @@ This application is a skill set presentation for CareCloud.
 Thank you for your review of this simple test application. 
 
 These are the features of the application.
-<ul>
-<li>Ajax CRUD application</li>
-<li>Validate that start time is not in the past</li>
-<li>Validate that end time is not older than the start time</li>
-<ui>
+
+* Ajax CRUD application
+* Validate that start time is not in the past
+* Validate that end time is not older than the start time
+
 
 TODO:
 1> validate that the events don't overlap
