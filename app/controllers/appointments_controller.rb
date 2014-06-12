@@ -30,10 +30,10 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         #format.json { render :show, status: :created, location: @appointment }
-        format.json { render json: { notice: "Appointment was successfully created.", status: :created, object: @appointment.to_json } }
+        format.json { render json: { notice: "Appointment was successfully created.", status: :created, object: @appointment.to_json }, status: :created }
       else
         format.html { render :new }
-        format.json { render json: @appointment.errors.full_messages, status: :unprocessable_entity }
+        format.json { render json: { errors: @appointment.errors.full_messages }, status: 422 }
       end
     end
   end
@@ -48,7 +48,7 @@ class AppointmentsController < ApplicationController
         format.json { render json: { notice: "Appointment was successfully updated.", status: :ok, object: @appointment.to_json } }
       else
         format.html { render :edit }
-        format.json { render json: @appointment.errors.full_messages, status: :unprocessable_entity }
+        format.json { render json: { errors: @appointment.errors.full_messages }, status: 422 }
       end
     end
   end
