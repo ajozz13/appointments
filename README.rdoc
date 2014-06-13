@@ -14,13 +14,12 @@ Thank you for your review of this simple test application.
 
 These are the features of the application.
 
-* Ajax CRUD application
+* Restful CRUD application
 * Validate that start time is not in the past
 * Validate that end time is not older than the start time
 
 
 TODO:
 1> validate that the events don't overlap
-2> ajax delete
-3> integrate jquery-ui effects.
+2> integrate jquery-ui effects.
 
