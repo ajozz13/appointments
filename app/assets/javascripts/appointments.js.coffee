@@ -31,8 +31,7 @@ $(document).on("ajax:success", ".appointment_form", (e, data, status, xhr) ->
     
 remove_tags = (link) ->
   #$(link).prev("input[type=hidden]").val("true")
-  alert "deleting"
-  $(link).parent().parent("tr").hide()
+  $(link).parent().parent("tr").remove()
   return false
   
 $(document).on 'click', '.link-delete', ->
