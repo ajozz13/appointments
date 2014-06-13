@@ -17,9 +17,10 @@ These are the features of the application.
 * Restful CRUD application
 * Validate that start time is not in the past
 * Validate that end time is not older than the start time
+* Validate that the calendar events don't overlap
 
 
 TODO:
-1> validate that the events don't overlap
-2> integrate jquery-ui effects.
+
+1> integrate jquery-ui effects.
 
