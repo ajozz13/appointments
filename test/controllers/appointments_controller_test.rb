@@ -44,6 +44,7 @@ class AppointmentsControllerTest < ActionController::TestCase
       delete :destroy, id: @appointment
     end
 
-    assert_redirected_to appointments_path
+    #assert_redirected_to appointments_path
+    assert_response 200
   end
 end
