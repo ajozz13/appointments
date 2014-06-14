@@ -47,10 +47,10 @@ ready = ->
   $(".date_time_field").each (i) ->
     $(this).datetimepicker
       dateFormat: 'yy-mm-dd'
-      timeFormat: 'hh:mm:ss'
+      timeFormat: 'hh:mm:ss TT'
       showSecond: false
       ampm: true
       timezone: '-0400'
-      minDate: 0
+      #minDate: 0
 
 $(document).on('page:load', ready)
