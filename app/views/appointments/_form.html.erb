@@ -1,5 +1,4 @@
 <div id="msgbox" class="mbox"><p id="msgbox_txt"></p></div>
-
 <%= form_for(@appointment, remote: true, format: :json, html: {class: :appointment_form}) do |f| %>
   <% if @appointment.errors.any? %>
     <div id="error_explanation">
@@ -15,11 +14,13 @@
 
   <div class="field">
     <%= f.label :start_time %><br>
-    <%= f.datetime_select :start_time %>
+ <!--   <%= f.datetime_select :start_time %>  -->
+ 	<%= f.text_field :start_time, class: "date_time_field" %>
   </div>
   <div class="field">
     <%= f.label :end_time %><br>
-    <%= f.datetime_select :end_time %>
+ <!--    <%= f.datetime_select :end_time %>  -->
+ 	<%= f.text_field :end_time, class: "date_time_field" %>
   </div>
   <div class="field">
     <%= f.label :first_name %><br>
