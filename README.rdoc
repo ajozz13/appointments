@@ -20,3 +20,17 @@ These are the features of the application.
 * Validate that the calendar events don't overlap
 * Integrate Jquery UI highlight Effect
 
+Experimental Branch Notes:
+
+	Checkout the 'experimental' branch to view changes.
+	
+	The Experimental branch replaces the regular rails datetime select with a simple
+	formated text field that uses the timepicker dropdown select option from:
+	http://trentrichardson.com/examples/timepicker/
+	
+	I like this tool because it integrates very well with the standard JQuery UI theme, 
+	so you could easily change themes and this plugin will properly display it's date and time
+	picking options.
+	
+	There is still work to be done on the update time format display, but otherwise I think it could be a 
+	good replacement tool for the standard rails date and time keeper.
