@@ -1,0 +1,43 @@
+Programmer Notes - CareCloud appointments
+
+app/assets/javascripts/appointment.js.coffee
+        In this class I demonstrate two JSON management techniques, 
+        used to handle the create and update functions.  Normally,
+        I would choose the approach employed in processErrorMessage
+        as a default, but in some cases we may need to retrieve the
+        answer from the server, parse and present.  The commented out
+        line
+        #$("#msgbox_txt").append json_obj.notice + "<br />" + json_obj.status + "<br />" + json_obj.object
+        shows the parsed JSON object options available.
+
+        The remove_tags function is used to handle the visual effect
+        that is triggered when the 'Delete' appointment tag is clicked.
+
+app/controllers/appointments_controller.rb
+        index
+                Setup index requests based on start_time, first_name
+                or a default to display all options.
+
+        create, update, destroy
+                Setup JSON response handling for AJAX submissions.
+                On create respond with JSON feed the created object, status
+                and a success message
+                On update response with just the JSON message, should include
+                the status code outside of the JSON response, in the same manner
+                as create.
+                on Destroy, don't respond, since on the default setup the user
+                confirms to delete and expects the item to visually dissapper
+                when the action is requested, the delete handling is done
+                with JQuery.
+
+app/models/appointment.rb
+        Setup validations for the date varibles, to check that the dates are valid      
+        and that there are no time conflicts with other dates.
+
+app/views/appointments
+         _form partial
+                On the experimental branch replace the datetime_select with regular
+                text field and a class to map the datetimepicker.
+
+         On the rest of the views change the form submit tags to remote mode, for Ajax handling.
+                
