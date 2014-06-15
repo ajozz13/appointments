@@ -5,9 +5,15 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     #@appointments = Appointment.all
-    @appointments = Appointment.order('start_time asc').all
+    @appointments = if params[:start_time]
+        Appointment.where( 'start_time > ?', params[:start_time] ).order( 'start_time asc' ).all
+      elsif params[:first_name]
+        Appointment.where( 'first_name like ?', "%#{ params[:first_name] }%" ).order( 'start_time asc' ).all
+      else
+        Appointment.order( 'start_time asc' ).all  
+    end
   end
-
+  
   # GET /appointments/1
   # GET /appointments/1.json
   def show
