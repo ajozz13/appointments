@@ -15,10 +15,12 @@ Thank you for your review of this simple test application.
 These are the features of the application.
 
 * Restful CRUD application
+* Handle create, show and delete via Ajax
 * Validate that start time is not in the past
 * Validate that end time is not older than the start time
 * Validate that the calendar events don't overlap
-* Integrate Jquery UI highlight Effect
+* Integrate JQuery UI highlight Effect
+* Integrate JQuery UI datepicker
 
 Experimental Branch Notes:
 
@@ -26,11 +28,11 @@ Experimental Branch Notes:
 	
 	The Experimental branch replaces the regular rails datetime select with a simple
 	formated text field that uses the timepicker dropdown select option from:
-	http://trentrichardson.com/examples/timepicker/
+	http://trentrichardson.com/examples/timepicker.
 	
 	I like this tool because it integrates very well with the standard JQuery UI theme, 
 	so you could easily change themes and this plugin will properly display it's date and time
 	picking options.
 	
 	There is still work to be done on the update time format display, but otherwise I think it could be a 
-	good replacement tool for the standard rails date and time keeper.
+	good replacement tool for the standard rails date and time picker dropdown form.
