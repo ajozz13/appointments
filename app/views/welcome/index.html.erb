@@ -3,3 +3,18 @@
 <p>These are the links available:
 	<ul><li><%= link_to 'Calendar Appointments', appointments_path %></li></ul>	
 </p>
+<p>You can also search for appointments:</p>
+<p>
+<%= form_tag("/appointments", method: "get") do %>
+  <%= label_tag(:start_time, "Starting on:") %>
+  <%= text_field_tag(:start_time, nil, class: 'date_field') %>
+  <%= submit_tag("Search") %>
+<% end %>
+</p>
+<p>
+<%= form_tag("/appointments", method: "get") do %>
+  <%= label_tag(:first_name, "First name:") %>
+  <%= text_field_tag(:first_name) %>
+  <%= submit_tag("Search") %>
+<% end %>	
+</p>
